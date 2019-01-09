@@ -22,20 +22,31 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <color key="backgroundColor" red="1" green="0.88541743097287695" blue="0.48508183629917023" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="6o6-sW-Qil">
-                                    <size key="itemSize" width="184" height="212"/>
+                                    <size key="itemSize" width="140" height="178"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ZBg-z1-3vG">
-                                        <rect key="frame" x="0.0" y="0.0" width="184" height="212"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="magicCell" id="ZBg-z1-3vG" customClass="MagicGatherCell" customModule="TradingCardCollection" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="140" height="178"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="184" height="212"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="140" height="178"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mRK-eI-0qs">
+                                                    <rect key="frame" x="0.0" y="0.0" width="140" height="178"/>
+                                                </imageView>
+                                            </subviews>
                                         </view>
                                         <color key="backgroundColor" red="1" green="0.54531992556299558" blue="0.47140298983299733" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstItem="mRK-eI-0qs" firstAttribute="top" secondItem="ZBg-z1-3vG" secondAttribute="top" id="2C1-l3-lV4"/>
+                                            <constraint firstAttribute="trailing" secondItem="mRK-eI-0qs" secondAttribute="trailing" id="EZd-XC-jmD"/>
+                                            <constraint firstItem="mRK-eI-0qs" firstAttribute="leading" secondItem="ZBg-z1-3vG" secondAttribute="leading" id="Pm6-S7-bVr"/>
+                                            <constraint firstAttribute="bottom" secondItem="mRK-eI-0qs" secondAttribute="bottom" id="w4w-7l-N8v"/>
+                                        </constraints>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -50,6 +61,9 @@
                         <viewLayoutGuide key="safeArea" id="fLG-2j-AKc"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="MagicGathering" id="w6Y-zP-OIk"/>
+                    <connections>
+                        <outlet property="magicGatheringCollectionView" destination="X0k-Gx-Tbj" id="abC-m6-Vxu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Fw-6g-Y6d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -266,12 +280,13 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Z0H-iC-fKh" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mOb-PS-aIE">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="vCJ-Hw-JTU"/>
                         <segue destination="Tdn-Vj-Z7j" kind="relationship" relationship="viewControllers" id="PF2-kW-YIe"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="vCJ-Hw-JTU"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WmR-Dq-CzY" userLabel="First Responder" sceneMemberID="firstResponder"/>

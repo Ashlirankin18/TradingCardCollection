@@ -8,11 +8,21 @@
 
 import Foundation
 final class TradingCardApiClient{
-  static func getPokemonCards(completionHandler: @escaping (AppError?,[Cards]?)-> Void){
-    let urlString = " https://api.pokemontcg.io/v1/cards?contains=imageUrl,imageUrlHiRes,attacks"
-    NetworkHelper.shared.performDataTask(endpointURLString: <#T##String#>, completionHandler: <#T##(AppError?, Data?, HTTPURLResponse?) -> Void#>)
+ static func getMagicGatheringCards(completionHandler: @escaping (AppError?,[Cards]?) -> Void){
+  let urlString = "https://api.magicthegathering.io/v1/cards?contains=imageUrl"
+  NetworkHelper.shared.performDataTask(endpointURLString: urlString) { (error, data, httpResponse) in
+    if let error = error{
+      completionHandler(AppError.badURL(error.errorMessage()),nil)
+    }
+    if let data = data {
+      do{
+        let cards = try JSONDecoder().decode(MGCards.self, from: data).cards
+        completionHandler(nil,cards)
+      } catch {
+        completionHandler(AppError.decodingError(error),nil)
+      }
+     
+    }
   }
-  static func getMagicGatheringCards(completionHandler: @escaping (AppError?,[MgCards]?) -> Void){
-    NetworkHelper.shared.performDataTask(endpointURLString: <#T##String#>, completionHandler: <#T##(AppError?, Data?, HTTPURLResponse?) -> Void#>)
-  }
+}
 }

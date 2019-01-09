@@ -7,3 +7,20 @@
 //
 
 import Foundation
+struct MGCards:Codable {
+  let cards: [Cards]
+}
+struct Cards:Codable{
+  let name:String
+  let imageUrl:URL?
+  let text: String
+  let foreignNames:[ForeignDetails]
+}
+struct ForeignDetails:Codable {
+  let name:String
+  let text:String
+  let imageUrl:URL?
+  let language:String
+  
+  
+}
