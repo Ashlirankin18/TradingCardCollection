@@ -16,12 +16,11 @@ final class TradingCardApiClient{
     }
     if let data = data {
       do{
-        let cards = try JSONDecoder().decode(MGCards.self, from: data).cards
+        let cards = try JSONDecoder().decode(MGCards.self, from: data).cards.filter{$0.imageUrl != nil}
         completionHandler(nil,cards)
       } catch {
         completionHandler(AppError.decodingError(error),nil)
       }
-     
     }
   }
 }

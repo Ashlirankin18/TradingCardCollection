@@ -22,6 +22,7 @@
 		2E2F138B21E6633B00A1D109 /* PokemonDetailed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2F138A21E6633B00A1D109 /* PokemonDetailed.swift */; };
 		2E2F138D21E6636100A1D109 /* MagicGatheringDetailled.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2F138C21E6636100A1D109 /* MagicGatheringDetailled.swift */; };
 		2E2F138F21E66F0500A1D109 /* MagicGatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2F138E21E66F0500A1D109 /* MagicGatherCell.swift */; };
+		2E2F139121E68E8600A1D109 /* MagicDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2F139021E68E8600A1D109 /* MagicDetailCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		2E2F138A21E6633B00A1D109 /* PokemonDetailed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PokemonDetailed.swift; path = TradingCardCollection/Controllers/PokemonDetailed.swift; sourceTree = SOURCE_ROOT; };
 		2E2F138C21E6636100A1D109 /* MagicGatheringDetailled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicGatheringDetailled.swift; sourceTree = "<group>"; };
 		2E2F138E21E66F0500A1D109 /* MagicGatherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicGatherCell.swift; sourceTree = "<group>"; };
+		2E2F139021E68E8600A1D109 /* MagicDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicDetailCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				2E2F136921E65F8D00A1D109 /* Main.storyboard */,
+				2E2F139021E68E8600A1D109 /* MagicDetailCell.swift */,
 				2E2F138E21E66F0500A1D109 /* MagicGatherCell.swift */,
 			);
 			path = Views;
@@ -214,6 +217,7 @@
 				2E2F137C21E65FD500A1D109 /* NetworkHelper.swift in Sources */,
 				2E2F137821E65FBD00A1D109 /* AppError.swift in Sources */,
 				2E2F138D21E6636100A1D109 /* MagicGatheringDetailled.swift in Sources */,
+				2E2F139121E68E8600A1D109 /* MagicDetailCell.swift in Sources */,
 				2E2F138B21E6633B00A1D109 /* PokemonDetailed.swift in Sources */,
 				2E2F137A21E65FC400A1D109 /* ImageHelper.swift in Sources */,
 				2E2F138921E662F300A1D109 /* MagicGatheringVC.swift in Sources */,

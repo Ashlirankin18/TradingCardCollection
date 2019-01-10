@@ -9,5 +9,6 @@
 import UIKit
 
 class MagicGatherCell: UICollectionViewCell {
-    
+  @IBOutlet weak var cardImage: UIImageView!
+  
 }
