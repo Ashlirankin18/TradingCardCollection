@@ -200,8 +200,19 @@
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="186" height="214"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="THO-uW-gaW">
+                                                    <rect key="frame" x="0.0" y="0.0" width="186" height="214"/>
+                                                </imageView>
+                                            </subviews>
                                         </view>
                                         <color key="backgroundColor" red="0.59980353311476797" green="0.95704897361369146" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstItem="THO-uW-gaW" firstAttribute="top" secondItem="hRy-Nl-ljy" secondAttribute="top" id="3pC-Bn-VUo"/>
+                                            <constraint firstAttribute="trailing" secondItem="THO-uW-gaW" secondAttribute="trailing" id="6g6-Lv-D7e"/>
+                                            <constraint firstAttribute="bottom" secondItem="THO-uW-gaW" secondAttribute="bottom" id="8dO-RI-4mh"/>
+                                            <constraint firstItem="THO-uW-gaW" firstAttribute="leading" secondItem="hRy-Nl-ljy" secondAttribute="leading" id="sVi-vq-eaj"/>
+                                        </constraints>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
