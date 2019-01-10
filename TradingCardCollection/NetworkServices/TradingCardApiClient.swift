@@ -23,5 +23,20 @@ final class TradingCardApiClient{
       }
     }
   }
-}
+  }
+  static func getPokemonCards(completionHandler: @escaping (AppError?,[Pokemon]?)-> Void) {
+    NetworkHelper.shared.performDataTask(endpointURLString: "https://api.pokemontcg.io/v1/cards?contains=imageUrl,imageUrlHiRes,attacks") { (appError, data, httpResponse) in
+      if let appError = appError {
+        completionHandler(AppError.badURL(appError.errorMessage()), nil)
+      }
+      if let data = data {
+        do {
+          let pokemon =  try JSONDecoder().decode(Pokemon.self, from: data)
+          completionHandler(nil, [pokemon])
+        } catch {
+          completionHandler(AppError.decodingError(error), nil)
+        }
+      }
+    }
+  }
 }

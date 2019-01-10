@@ -13,4 +13,7 @@ class MagicDetailCell: UICollectionViewCell {
   @IBOutlet weak var cardName: UILabel!
   @IBOutlet weak var cardDescription: UITextView!
   @IBOutlet weak var cardLanguage: UILabel!
+  override func prepareForReuse() {
+    cardImage.image = nil
+  }
 }
